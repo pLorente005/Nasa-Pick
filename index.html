@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto del día</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border: none;
+            border-radius: 1rem;
+        }
+        .card-body {
+            padding: 2rem;
+        }
+        #title {
+            font-family: 'Arial Black', sans-serif;
+            color: #343a40;
+        }
+        #date {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+        #explanation {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #495057;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #343a40;
+            border-radius: 50%;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .form-inline .form-control {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h1 id="title" class="display-4 mb-4">Foto del Día</h1>
+                <p id="date" class="lead mb-4"></p>
+                <div id="media-container" class="carousel slide my-4" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide items will be injected here by script -->
+                    </div>
+                    <a class="carousel-control-prev" href="#media-container" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#media-container" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+                <p id="explanation" class="text-justify mb-4"></p>
+                <div class="form-inline justify-content-center my-4">
+                    <label for="datePicker" class="mr-2">Selecciona una fecha:</label>
+                    <input type="date" id="datePicker" class="form-control mr-2">
+                    <button id="fetchImageBtn" class="btn btn-primary">Buscar Imagen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
